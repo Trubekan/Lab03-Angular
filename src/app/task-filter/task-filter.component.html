@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-center align-items-center" style="background-color: #fc0707; width: 300px; padding: 10px; margin: auto;">
+  <label for="filter">Filtro:</label>
+  <select id="filter" [(ngModel)]="selectedFilter" (change)="onFilterChange()">
+      <option value="all">Todos</option>
+      <option value="completed">Completados</option>
+      <option value="incomplete">Incompletos</option>
+  </select>
+</div>

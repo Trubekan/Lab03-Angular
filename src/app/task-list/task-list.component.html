@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+  <ul style="list-style-type: none; padding: 0;">
+    <li *ngFor="let task of filteredTasks; let i = index" [ngClass]="{ 'completed': completed[i] }">
+      <input type="checkbox" [(ngModel)]="completed[i]" id="task{{i}}" (click)="onTaskStatusClick(i)">
+      <label for="task{{i}}">{{ task }}</label>
+      <span>&nbsp;{{ completed[i] ? 'Completada' : 'Incompleta' }}</span>
+    </li>
+  </ul>
+</div>
